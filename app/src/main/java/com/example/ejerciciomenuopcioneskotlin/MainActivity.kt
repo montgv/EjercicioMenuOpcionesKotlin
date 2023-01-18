@@ -22,20 +22,16 @@ class MainActivity : AppCompatActivity() {
         registerForContextMenu(binding.idIVDaw)
     }
 
-    /*
-    Sobreescribimos el evento encargado de construir los menus opciones asociados a los diferentes
-    controles
-     */
+    // Sobreescribimos el evento encargado de construir los menus opciones asociados a los diferentes
+    //controles
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu_opciones, menu)
         return true
     }
 
-    /*
-    Sobreescribimos el evento encargado de construir los menus contextuales asociados a los diferentes
-    controles
-     */
+    //Sobreescribimos el evento encargado de construir los menus contextuales asociados a los diferentes
+    //controles
     override fun onCreateContextMenu(
         menu: ContextMenu?,
         v: View?,
@@ -46,9 +42,7 @@ class MainActivity : AppCompatActivity() {
         inflater.inflate(R.menu.menu_opciones, menu)
     }
 
-    /*
-    Implementamos las acciones a realizar tras pulsar una opcion determinada del menu
-     */
+    //Implementamos las acciones a realizar tras pulsar una opcion determinada del menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.idAsir -> {
@@ -71,9 +65,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    /*
-    Implementamos las acciones a realizar tras pulsar una opcion determinada del menu contextual
-     */
+    //Implementamos las acciones a realizar tras pulsar una opcion determinada del menu contextual
     override fun onContextItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.idAsir -> {
